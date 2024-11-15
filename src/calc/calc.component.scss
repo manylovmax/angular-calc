@@ -1,6 +1,4 @@
 .calc-wrapper {
-    display: flex;
-    flex-direction: column;
     font-size: 24px;
     font-weight: bold;
 }
@@ -10,6 +8,8 @@
     width:  220px;
     background-color: #f2f2f2;
     margin: 10px;
+    text-align: end;
+    padding-right: 10px;
 }
 
 .calc-button {
@@ -21,6 +21,7 @@
     margin: 10px;
     text-align: center;
     cursor: pointer;
+    user-select: none;
 }
 
 .calc-button:hover {
@@ -28,16 +29,17 @@
 }
 
 .calc-numbers {
-    display: flex;
-    flex-wrap: wrap;
     width: 180px;
+    vertical-align: top;
+}
+.calc-numbers * {
+    display: inline-block;
 }
 
-.calc-buttons {
-    display: flex;
+.calc-buttons > * {
+    display: inline-block;
 }
 
-.calc-operators {
-    display: flex;
-    flex-direction: column;
+.calc-operators > * {
+    margin-bottom: 20px;
 }

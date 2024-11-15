@@ -1,24 +1,26 @@
 <div class="calc-wrapper">
-    <div class="calc-display"></div>
+    <div class="calc-display">{{value}}</div>
     <div class="calc-buttons">
         <div class="calc-numbers">
-            <div class="calc-button">1</div>
-            <div class="calc-button">2</div>
-            <div class="calc-button">3</div>
-            <div class="calc-button">4</div>
-            <div class="calc-button">5</div>
-            <div class="calc-button">6</div>
-            <div class="calc-button">7</div>
-            <div class="calc-button">8</div>
-            <div class="calc-button">9</div>
-            <div class="calc-button">0</div>
-            <div class="calc-button">.</div>
+            <div (click)="clickNumber(1)" class="calc-button">1</div>
+            <div (click)="clickNumber(2)" class="calc-button">2</div>
+            <div (click)="clickNumber(3)" class="calc-button">3</div>
+            <div (click)="clickNumber(4)" class="calc-button">4</div>
+            <div (click)="clickNumber(5)" class="calc-button">5</div>
+            <div (click)="clickNumber(6)" class="calc-button">6</div>
+            <div (click)="clickNumber(7)" class="calc-button">7</div>
+            <div (click)="clickNumber(8)" class="calc-button">8</div>
+            <div (click)="clickNumber(9)" class="calc-button">9</div>
+            <div (click)="clickNumber(0)" class="calc-button">0</div>
+            <div (click)="clickDot()" class="calc-button">.</div>
         </div>
         <div class="calc-operators">
-            <div class="calc-button">+</div>
-            <div class="calc-button">-</div>
-            <div class="calc-button">/</div>
-            <div class="calc-button">*</div>
+            <div (click)="clickClear()" class="calc-button">C</div>
+            <div (click)="clickOperation('+')" class="calc-button">+</div>
+            <div (click)="clickOperation('-')" class="calc-button">-</div>
+            <div (click)="clickOperation('/')" class="calc-button">/</div>
+            <div (click)="clickOperation('*')" class="calc-button">*</div>
+            <div (click)="clickEquals()" class="calc-button">=</div>
         </div>
     </div>
 </div>
