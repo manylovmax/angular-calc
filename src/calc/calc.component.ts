@@ -8,19 +8,19 @@ import { Component } from '@angular/core';
   styleUrl: './calc.component.scss'
 })
 export class CalcComponent {
-  value : String = '0';
-  secondValue: String = '0';
-  operation: String = '';
+  value : string = '0';
+  secondValue: string = '0';
+  operation: string = '';
 
   clickClear(): void {
     this.value = this.secondValue = '0';
   }
 
-  clickNumber(n: number): void {
+  clickNumber(n: string): void {
     if (this.value == '0') {
-      this.value = String(n)
+      this.value = n
     } else {
-      this.value = this.value + String(n)
+      this.value = this.value + n;
     }
   }
 
@@ -32,7 +32,7 @@ export class CalcComponent {
     if (this.secondValue == '0')
       return;
 
-    let result: Number = 0;
+    let result: number = 0;
     if (this.operation === '+') {
       result = Number(this.secondValue) + Number(this.value)
     } else if (this.operation === '-') {
@@ -51,7 +51,7 @@ export class CalcComponent {
     this.calcValue()
   }
 
-  clickOperation(operator: String) {
+  clickOperation(operator: string) {
     if (this.secondValue != '0')
       this.calcValue();
     this.operation = operator;
