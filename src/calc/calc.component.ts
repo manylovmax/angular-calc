@@ -52,9 +52,9 @@ export class CalcComponent {
   }
 
   clickOperation(operator: string) {
+    this.operation = operator;
     if (this.secondValue != '0')
       this.calcValue();
-    this.operation = operator;
     this.secondValue = this.value;
     this.value = '0';
   }
